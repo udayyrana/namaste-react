@@ -22,21 +22,27 @@
 }
 
 .res-container{
+    width: 1400px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .res-card{
     margin: 5px;
-    padding: 5px;
-    width: 200px;
+    padding: 15px;
+    width: 300px;
     /* height: 400px; */
     border: 1px solid white;
+    border-radius: 20px;
 }
 
 .res-card:hover{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     cursor: pointer;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
 .search{
@@ -45,9 +51,25 @@
 
 .res-logo{
     width: 100%;
+    height: 200px;
 }
 
 .filter-btn{
     margin: 10px;
     cursor: pointer;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmer-card{
+    margin: 20px;
+    width: 200px;
+    height: 400px;
+    background: #f0f0f0;
+}
+
+.search-input{
+    margin: 15px;
 }

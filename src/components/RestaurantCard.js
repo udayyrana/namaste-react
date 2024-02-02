@@ -1,19 +1,19 @@
+import { CDN_URL } from "../utils/constants.js";
+
 export default RestaurantCard = (props) => {
   const { resData } = props;
-  const { name, cuisines, avgRatingString, costForTwo, deliveryTime } =
+  const { name, cuisines, avgRatingString, costForTwo, cloudinaryImageId } =
     resData?.info;
+  const { deliveryTime } = resData?.info.sla;
+
   return (
-    <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
-      <img
-        className="res-logo"
-        src="https://content3.jdmagicbox.com/comp/chennai/p2/044pxx44.xx44.210618041853.z9p2/catalogue/kfc-adambakkam-chennai-fast-food-16x74xsxpy.jpg?clr="
-        alt=""
-      />
+    <div className="res-card">
+      <img className="res-logo" src={CDN_URL + cloudinaryImageId} alt={name} />
       <h3>{name}</h3>
-      <h4>{cuisines.join(",")}</h4>
-      <h4>{avgRatingString} stars</h4>
-      <h4>{costForTwo}</h4>
-      <h4>{deliveryTime} minutes</h4>
+      <p className="cuisines">{cuisines.slice(0, 3).join(", ")}</p>
+      <p>{avgRatingString} stars</p>
+      <p>{costForTwo}</p>
+      <p>{deliveryTime} minutes</p>
     </div>
   );
 };
