@@ -59,3 +59,8 @@
 
 - it uses virtual DOM
 - virtual DOM - is representation of actual DOM
+
+# 2 types of routing in web apps
+
+- Client side routing - when we load our website, all the code loads in inital request, it does not fetch any new page, therefore it is client side routing, this makes react single page application
+- server side routing - browsers reloads the whole page, when client requests something
